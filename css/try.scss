@@ -1,0 +1,407 @@
+@import '../bootstrap-5.3.1/bootstrap-5.3.1/scss/bootstrap-reboot.scss';
+@import'../bootstrap-5.3.1/bootstrap-5.3.1/scss/bootstrap-grid.scss';
+
+
+
+.brand {
+    font-size: 27px;
+    position: relative;
+    top: -5px;
+    left: 5px;
+
+
+}
+
+.navbar {
+    position: fixed;
+    height: 50px;
+    top: 40px;
+    left: 10%;
+    right: 10%;
+    background-color: rgba(#D2E5F2, 0.6);
+    // backdrop-filter: blur(50px);
+    z-index: 10;
+
+
+}
+
+
+
+// 3項list
+.navbar-list {
+    display: flex;
+    list-style: none;
+    font-size: 1em;
+    flex-shrink: 3;
+    margin-top: 7px;
+
+}
+
+
+// 包含logo
+.list-item {
+    padding: 0.4rem 0.6rem;
+
+    display: block;
+    //  a 標籤本身是inline 因此用inlineblock將標籤往下推
+    text-decoration: none;
+    color: black;
+
+
+    &:hover,
+    &.active {
+        color: blue;
+    }
+
+}
+
+.toggle-button {
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+
+}
+
+
+.me {
+    position: center;
+    width: 80%;
+    opacity: 95%;
+    background-size: contain;
+    background-position: center;
+    margin: 20px 10% 0 10%;
+    z-index: -1000;
+
+}
+
+.header-content {
+    // border: 1px solid black;
+    display: flex;
+    // flex-grow: 1;
+    flex-direction: column;
+    // justify-content: center;
+
+
+}
+
+.container2 {
+    // border: 1px solid black;
+    position: absolute;
+    z-index: 2;
+    top: 120px;
+    left: 10%;
+    right: 10%;
+
+}
+
+
+
+
+$primary-light: #A7D2EA;
+$primary: #76b8db;
+
+.knowme {
+    font-size: larger;
+    position: relative;
+    width: 70%;
+    top: 10px;
+    right: -30px;
+    display: inline-block;
+    padding: 7px 20px;
+    border-radius: 100px;
+    background-color: #A7D2EA;
+    color: black;
+    text-shadow: rgb(187, 187, 187) 0.1em 0.1em 0.2em;
+    border: none;
+    letter-spacing: 2px;
+    cursor: wait;
+    transition-duration: 0.4s;
+
+    &:hover,
+    &:active {
+        background-image: linear-gradient(to bottom, $primary, $primary-light);
+        box-shadow: $primary-light 3px 3px 10px;
+        scale: 1.1;
+    }
+
+}
+
+
+// .knowme:hover:active {
+//     darken($knowme,5%),$primary-light
+//     scale: 1.1;
+// }
+
+.header-content h1 {
+    font-size: 40px;
+    font-weight: 550;
+    color: white;
+    // -webkit-text-stroke: 0.5px black;
+    text-shadow: 0 0 15px black;
+    // text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
+
+}
+
+// Drop Down Menu //
+.navbar-list-straight {
+    height: 0;
+    display: none;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    left: 7rem;
+    top: 100px;
+    width: 100px;
+    background: hsla(0, 0%, 100%, .6);
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 5;
+    transition: height .6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+
+.navbar-list-straight.open {
+    height: 200px;
+}
+
+.navbar-list-straight li {
+
+
+    font-size: small;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+
+//---------------- Blog ----- Carousel-----------//
+
+.blog {
+    background: url('../img/bg.jpg');
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: -100;
+}
+
+.blog-lower .blog-post {
+    padding-top: 3rem;
+
+
+
+    // margin: 0 auto;
+    width: 80%;
+    left: 10%;
+    box-sizing: border-box;
+    //     right: 10%;
+    // 
+}
+
+.blog-post .blog-content {
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.477);
+    flex-direction: column;
+    text-align: center;
+    width: 80%;
+    margin: 3rem 2rem;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+}
+
+.blog-content .blog-title {
+    padding: 2rem 0;
+}
+
+.blog-content .btn-blog {
+    display: block;
+    padding: .5rem 2rem;
+    background: var(--sky);
+    margin: 1rem auto;
+    cursor: pointer;
+    background-color: #A7D2EA;
+    color: black;
+    text-shadow: rgb(187, 187, 187) 0.1em 0.1em 0.2em;
+    border: none;
+    transition-duration: 0.4s;
+
+    &:hover,
+    &:active {
+        background-image: linear-gradient(to bottom, $primary, $primary-light);
+        box-shadow: $primary-light 3px 3px 10px;
+        scale: 1.1;
+    }
+
+
+
+}
+
+.blog-image {
+    width: 100%;
+    height: 100px;
+}
+
+
+
+.blog-container .owl-nav .owl-nav-prev {
+    position: absolute;
+    left: -3%;
+    top: 50%;
+}
+
+.blog-container .owl-nav .owl-nav-next {
+    position: absolute;
+    right: -3%;
+    top: 50%;
+
+}
+
+
+.blog-container .owl-nav .owl-nav-prev,
+.blog-container .owl-nav .owl-nav-next {
+    box-sizing: border-box;
+    margin: 0;
+    width: 3rem;
+    height: 3rem;
+    font-size: 2rem;
+    // left: 50%;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+.blog-container .owl-nav {
+    :hover {
+        background-color: rgb(93, 224, 250);
+        color: white;
+        outline: none;
+    }
+
+}
+
+
+
+
+//---------------- Blog ----- Carousel----------^^-//
+
+
+
+
+// Responsive Design  //
+@media (max-width:1000px) {
+
+    .navbar-list-straight {
+        display: block;
+    }
+
+
+    .navbar-list {
+        display: none;
+    }
+
+    .toggle-button {
+        display: block;
+    }
+
+    .header-content h1 {
+        display: none;
+    }
+
+    .knowme {
+        position: relative;
+        width: 160px;
+        top: 50px;
+        right: -70px;
+        display: inline-block;
+        padding: 7px 20px;
+        font-size: large;
+    }
+
+    .brand {
+        display: none;
+    }
+
+    .list-item {
+        padding: 0.4rem;
+    }
+}
+
+@media (max-width:800px) {
+    .knowme {
+        display: none;
+    }
+
+    .navbar {
+        background-color: rgba(#D2E5F2, 0.1);
+    }
+
+    .navbar-list-straight.open {
+
+        height: 80px;
+        width: 250px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .list-item {
+        font-size: large;
+    }
+}
+
+@media (max-width:400px) {
+    .navbar-list-straight.open {
+        display: block;
+        position: relative;
+        top: -100px;
+        height: 70px;
+        width: 160px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .list-item {
+        font-size: 12px;
+    }
+
+}
+
+@media(max-width:400px) {
+    .blog-lower {
+        margin: 0 auto;
+    }
+
+
+}
+
+
+
+//Utilities.scss
+
+.d-flex {
+    display: flex;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.p-relative {
+    position: relative;
+}
+
+.p-absolute {
+    position: absolute;
+}
+
+.flex-direction-col {
+    flex-direction: column;
+}
