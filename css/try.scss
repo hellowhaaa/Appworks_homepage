@@ -178,10 +178,6 @@ $primary: #76b8db;
 //---------------- Blog ----- Carousel-----------//
 
 
-.blog .back {
-    width: 100%;
-    height: 100%;
-}
 
 .blog {
 
@@ -194,6 +190,10 @@ $primary: #76b8db;
     z-index: -100;
 }
 
+.blog .back {
+    width: 100%;
+    height: 100vh;
+}
 
 
 

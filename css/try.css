@@ -4790,11 +4790,6 @@ progress {
   align-items: flex-start;
 }
 
-.blog .back {
-  width: 100%;
-  height: 100%;
-}
-
 .blog {
   background-repeat: no-repeat;
   background-position: right;
@@ -4803,6 +4798,11 @@ progress {
   top: 0px;
   left: 0px;
   z-index: -100;
+}
+
+.blog .back {
+  width: 100%;
+  height: 100vh;
 }
 
 .blog-lower .blog-post {
