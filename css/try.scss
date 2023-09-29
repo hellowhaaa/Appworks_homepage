@@ -7,8 +7,6 @@
     position: relative;
     top: -5px;
     left: 5px;
-
-
 }
 
 .navbar {
@@ -20,10 +18,7 @@
     background-color: rgba(#D2E5F2, 0.6);
     // backdrop-filter: blur(50px);
     z-index: 10;
-
-
 }
-
 
 
 // 3項list
@@ -40,16 +35,18 @@
 // 包含logo
 .list-item {
     padding: 0.4rem 0.6rem;
-
     display: block;
     //  a 標籤本身是inline 因此用inlineblock將標籤往下推
     text-decoration: none;
     color: black;
 
+    &:hover {
+        color: white;
+        // border-bottom: .5px solid red;
+    }
 
-    &:hover,
-    &.active {
-        color: blue;
+    &:active {
+        color: black;
     }
 
 }
@@ -74,17 +71,11 @@
 }
 
 .header-content {
-    // border: 1px solid black;
     display: flex;
-    // flex-grow: 1;
     flex-direction: column;
-    // justify-content: center;
-
-
 }
 
 .container2 {
-    // border: 1px solid black;
     position: absolute;
     z-index: 2;
     top: 120px;
@@ -92,9 +83,6 @@
     right: 10%;
 
 }
-
-
-
 
 $primary-light: #A7D2EA;
 $primary: #76b8db;
@@ -126,18 +114,11 @@ $primary: #76b8db;
 }
 
 
-// .knowme:hover:active {
-//     darken($knowme,5%),$primary-light
-//     scale: 1.1;
-// }
-
 .header-content h1 {
     font-size: 40px;
     font-weight: 550;
     color: white;
-    // -webkit-text-stroke: 0.5px black;
     text-shadow: 0 0 15px black;
-    // text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
 
 }
 
@@ -178,7 +159,6 @@ $primary: #76b8db;
 //---------------- Blog ----- Carousel-----------//
 
 
-
 .blog {
 
     background-repeat: no-repeat;
@@ -195,19 +175,11 @@ $primary: #76b8db;
     height: 100vh;
 }
 
-
-
 .blog-lower .blog-post {
     padding-top: 3rem;
-
-
-
-    // margin: 0 auto;
     width: 80%;
     left: 10%;
     box-sizing: border-box;
-    //     right: 10%;
-    // 
 }
 
 .blog-post .blog-content {
@@ -235,6 +207,8 @@ $primary: #76b8db;
     text-shadow: rgb(187, 187, 187) 0.1em 0.1em 0.2em;
     border: none;
     transition-duration: 0.4s;
+    border-radius: 100px;
+    text-transform: uppercase;
 
     &:hover,
     &:active {
@@ -242,13 +216,7 @@ $primary: #76b8db;
         box-shadow: $primary-light 3px 3px 10px;
         scale: 1.1;
     }
-
-
-
 }
-
-
-
 
 
 .blog-container .owl-nav .owl-nav-prev {
@@ -287,11 +255,7 @@ $primary: #76b8db;
 }
 
 
-
-
 //---------------- Blog ----- Carousel----------^^-//
-
-
 
 
 // Responsive Design  //

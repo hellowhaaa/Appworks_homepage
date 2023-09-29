@@ -4699,8 +4699,11 @@ progress {
   text-decoration: none;
   color: black;
 }
-.list-item:hover, .list-item.active {
-  color: blue;
+.list-item:hover {
+  color: white;
+}
+.list-item:active {
+  color: black;
 }
 
 .toggle-button {
@@ -4837,6 +4840,8 @@ progress {
   text-shadow: rgb(187, 187, 187) 0.1em 0.1em 0.2em;
   border: none;
   transition-duration: 0.4s;
+  border-radius: 100px;
+  text-transform: uppercase;
 }
 .blog-content .btn-blog:hover, .blog-content .btn-blog:active {
   background-image: linear-gradient(to bottom, #76b8db, #A7D2EA);
