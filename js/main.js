@@ -13,9 +13,9 @@ const responsive = {
 $(document).ready(function () {
     $('.owl-carousel').owlCarousel({
         loop: true,
-        autoplay: false,
-        autoplayTimeout: 3000,
-        // autoplayHoverPause: true
+        autoplay: true,
+        autoplayTimeout: 2500,
+        autoplayHoverPause: true,
         nav: true,
         navText: [$('.owl-navigation .owl-nav-prev'), $('.owl-navigation .owl-nav-next')],
         responsive: responsive

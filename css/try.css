@@ -4868,7 +4868,7 @@ progress {
 }
 
 .blog-container .owl-nav :hover {
-  background-color: rgb(93, 224, 250);
+  background-color: rgba(157, 195, 204, 0.9137254902);
   color: white;
   outline: none;
 }
